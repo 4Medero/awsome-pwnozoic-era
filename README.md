@@ -1,6 +1,12 @@
-![cooltext472971370036612](https://github.com/user-attachments/assets/a1796ca7-0171-4d26-96bd-185e33d2debd)
+![Pwnozoic-Era](https://github.com/user-attachments/assets/a1796ca7-0171-4d26-96bd-185e33d2debd)
 
-A curated list of resources about learning binary exploitation(Pwnology Roadmap)
+<p> 
+<img src="https://github.com/user-attachments/assets/d9f33e61-bf4d-452f-aa11-2370a9b3f045" align="left">
+</p>
+
+[![Awesome](https://cdn.rawgit.com/sindresorhus/awesome/d7305f38d29fed78fa85652e3a63e154dd8e8829/media/badge.svg)](https://github.com/sindresorhus/awesome)
+
+**A curated list of resources about learning binary exploitation(Pwnology Roadmap)**
 
 ## Books
 ### Exploiting
