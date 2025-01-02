@@ -21,7 +21,7 @@ Attackers cannot execute code injected into the stack or heap.
 * Hinders exploits:
 Mitigates attacks that rely on executing malicious code in areas not designed for it.
 
-* [ASLR](rsc/Keywords/Protections/ASLR.md) compatibility:
+* [ASLR](./ASLR.md) compatibility:
 Together with ASLR, forms a solid barrier against many types of exploits.
 
 ## Limitations of NX
