@@ -58,7 +58,7 @@
 
 ## Attack Techniques 
 
-### [Buffer Overflow(BOF)](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
+### [Stack && Buffer Overflow(BOF)](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
 BOF occurs when the amount of data in the buffer exceeds its storage capacity. That extra data overflows into adjacent memory locations and corrupts or overwrites the data in those locations.
 [Example](rsc/BOF/)
 
@@ -85,7 +85,32 @@ BOF occurs when the amount of data in the buffer exceeds its storage capacity. T
     - `RELRO`(Partial)
     - Note: Although ASLR randomizes addresses in memory, in binaries without `PIE` (Position Independent Executable), the libc base address can be predictable or filtered through information leaks. See [leaked libc](https://github.com/D4nex/Notes/blob/master/Binary%20Exploitation/leaked_libc.md)
 
+## Resources
 
+### Assambly
+* Registers
+  - [x32 Registers](rsc/Keywords/Assambly/x32registers.md)
+  - [x64 Registers](rsc/Keywords/Assambly/x64registers.md)
+  - [Registers Table](rsc/Keywords/Assambly/registers_table.md)
+  - [Call Convention](rsc/Keywords/Assambly/call_convention.md)
+  - [Endianess](https://youtu.be/T8E_JRqN0fY?si=GoPxTucPUx3sfnZ6)
+* Stack:
+  - [The Stack](https://ctf101.org/binary-exploitation/what-is-the-stack/)
+* Heap:
+  - [The Heap](https://ir0nstone.gitbook.io/notes/binexp/heap/introduction-to-the-heap)
+### C vulnerable functions
+* [Stack && Buffer Overflow](rsc/Keywords/Functions/bof_vuln_functions.md)
+* [Heap Overflow](rsc/Keywords/Functions/heap_vuln_functions.md)
+* [Format String ](rsc/Keywords/Functions/fstring_vuln_functions.md)
+* [Integer Overflow ](rsc/Keywords/Functions/iof_vuln_functions.md)
+
+### Protections
+* [NX](rsc/Keywords/Protections/NX.md)
+* [Stack Canary](rsc/Keywords/Protections/CANARY)
+* [ASLR](rsc/Keywords/Protections/ASLR.md)
+
+### Linux binaries(ELF)
+* [PLT && GOT](rsc/Keywords/Assambly/plt_got.md)
 ## Pwnology
 
 ![Pwnology](https://github.com/user-attachments/assets/549f39f3-1aaf-408d-96e9-4bad0e0eb37e)

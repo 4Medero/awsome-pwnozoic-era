@@ -94,8 +94,8 @@ int main(int argc, char **argv){
 * Get the binary source code:
   - Already in CTF challenges
   - Perform reverse engineering
-* Analyze the code and obtain [vulnerable functions](/rsc/vuln_functions/bof_vuln_functions.md)
-* [Fuzzing](/rsc/fuzzing/fuzz.md)
+* Analyze the code and obtain [vulnerable functions](bof_vuln_functions.md)
+* [Fuzzing](fuzzing.md)
 ```cmd
 ~$ python -c "print(b'A'*64)" | ./vuln
 ```

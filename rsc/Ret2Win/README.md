@@ -64,9 +64,9 @@ print(f"{response.decode('utf-8')}")
 
 ## Steps
 
-* Analyze the code and obtain [vulnerable functions](rsc/vuln_functions/README.md)
-* [Fuzzing](rsc/fuzzing/README.md)
-* Generate [deBruijin sequence](rsc/deBruijin/README.md) to inject into the vulnerable section of the binary and check the [offset](rsc/offset/README.md)
+* Analyze the code and obtain [vulnerable functions](bof_vuln_functions.md)
+* [Fuzzing](fuzzing.md)
+* Generate [deBruijin sequence](deBruijin.md) to inject into the vulnerable section of the binary and check the [offset](offset.md)
 * Obtain the pattern offset(44)
 * Obtain *win()* function(0x080491f6)
 * Exploiting!
