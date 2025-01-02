@@ -42,7 +42,6 @@
 * **Libraries**:
   - [pwntools](https://docs.pwntools.com/en/stable/) - pwntools is a CTF framework and exploit development library. Written in Python, it is designed for rapid prototyping and development, and intended to make exploit writing as simple as possible.
   - [r2pipe](https://github.com/radareorg/radare2-r2pipe) - Access radare2 via pipe from any programming language!
-  - 
   - [capstone](https://www.capstone-engine.org) - Capstone disassembly/disassembler framework for ARM, ARM64 (ARMv8), Alpha, BPF, Ethereum VM, HPPA, LoongArch, M68K, M680X, Mips, MOS65XX, PPC, RISC-V(rv32G/rv64G), SH, Sparc, SystemZ, TMS320C64X, TriCore, Webassembly, XCore and X86.
   - [struct](https://docs.python.org/3/library/struct.html) - This module converts between Python values and C structs represented as Python bytes objects.
   - [sockets](https://docs.python.org/es/3/library/socket.html) - This module provides access to the BSD socket interface. It is available on all modern Unix systems, Windows, MacOS, and probably additional platforms.
@@ -55,12 +54,12 @@
 - [ROPEmporium](https://ropemporium.com/)
 - [crackmes.one](https://crackmes.one/)
 - [Microcorruption](https://microcorruption.com/)
-- 
 
 ## Attack Techniques 
 
 ### [Buffer Overflow(BOF)](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
 BOF occurs when the amount of data in the buffer exceeds its storage capacity. That extra data overflows into adjacent memory locations and corrupts or overwrites the data in those locations.
+[Example](rsc/BOF/README.md)
 
 * [Ret2Shellcode](https://www.youtube.com/watch?v=6Yiupj3XHrM)
   - Consists of injecting shellcode into the program's memory, usually on the stack or heap, and then redirecting the execution flow to that location to execute it.
@@ -75,6 +74,7 @@ BOF occurs when the amount of data in the buffer exceeds its storage capacity. T
     - `NX`
     - No `ASLR` or limited
     - A `win()` function
+  - [Example](rsc/Ret2Win/README.md)
 * [Ret2Libc](https://www.ired.team/offensive-security/code-injection-process-injection/binary-exploitation/return-to-libc-ret2libc)
   - Redirects the execution flow to existing functions in the standard C library (libc), such as *system()*, *execve()* or *exit()*. Instead of injecting code, functions available in program memory are reused. It is especially useful for executing arbitrary commands (such as opening a shell) on protected systems.
   - **When**:
