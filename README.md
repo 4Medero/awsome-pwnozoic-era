@@ -49,6 +49,35 @@ A curated list of resources about learning binary exploitation(Pwnology Roadmap)
 - [ROPEmporium](https://ropemporium.com/)
 - [crackmes.one](https://crackmes.one/)
 - [Microcorruption](https://microcorruption.com/)
+- 
+
+## Attack Techniques 
+
+### [Buffer Overflow(BOF)](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
+BOF occurs when the amount of data in the buffer exceeds its storage capacity. That extra data overflows into adjacent memory locations and corrupts or overwrites the data in those locations.
+
+* [Ret2Shellcode](https://www.youtube.com/watch?v=6Yiupj3XHrM)
+  - Consists of injecting shellcode into the program's memory, usually on the stack or heap, and then redirecting the execution flow to that location to execute it.
+  - **When**:
+    - `NX Disabled`
+    - No `ASLR` or limited
+    - No `stack canary` found
+    - Availability of executable memory
+* [Ret2Win](https://ir0nstone.gitbook.io/notes/binexp/stack/ret2win)
+  - ret2win is a binary exploitation technique that consists of redirecting the execution flow to an existing function within the binary that already performs a useful task for the attacker, such as opening a shell or reading a specific file.
+  - **When**:
+    - `NX`
+    - No `ASLR` or limited
+    - A `win()` function
+* [Ret2Libc](https://www.ired.team/offensive-security/code-injection-process-injection/binary-exploitation/return-to-libc-ret2libc)
+  - Redirects the execution flow to existing functions in the standard C library (libc), such as *system()*, *execve()* or *exit()*. Instead of injecting code, functions available in program memory are reused. It is especially useful for executing arbitrary commands (such as opening a shell) on protected systems.
+  - **When**:
+    - `NX`
+    - No `ASLR` or limited(Partial)
+    - No `stack canary` found(Partial)
+    - `RELRO`(Partial)
+    - Note: Although ASLR randomizes addresses in memory, in binaries without `PIE` (Position Independent Executable), the libc base address can be predictable or filtered through information leaks. See [leaked libc](https://github.com/D4nex/Notes/blob/master/Binary%20Exploitation/leaked_libc.md)
+
 
 ## Pwnology
 
