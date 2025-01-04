@@ -23,4 +23,8 @@ Attacks that rely on known addresses (such as returning to the stack or calling 
 
 * Mitigates reusable exploits: Exploits designed for fixed addresses will not work on ASLR-enabled systems.
 
+<<<<<<< HEAD
 * Combined protection: Works well in conjunction with other security techniques, such as non-executable execution ([NX](./NX.md))and [stack canarie](./CANARY.md)
+=======
+* Combined protection: Works well in conjunction with other security techniques, such as non-executable execution ([NX](./NX.md))and [stack canarie](./CANARY.md)
+>>>>>>> 1c968b5 (Update Pwnozoic)

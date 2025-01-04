@@ -8,6 +8,21 @@
 
 **A curated list of resources about learning binary exploitation(Pwnology Roadmap)**
 
+# Content
+
+* [Books](#Books)
+  - [Exploiting](#Exploiting)
+  - [Reversing](#Reversing)
+* [Tools](#Tools)
+  - [Debuggers](#Debuggers)
+  - [Decompilers](Decompilers)
+  - [Libraries](#Libraries)
+* [Training](Training)
+* [Miscellaneous](#Miscellaneous)
+* [Techniques](#Techniques)
+* [Resources](#Resources)
+* [Pwnology](#Pwnology)
+
 ## Books
 ### Exploiting
 - ["Hacking: The Art of Exploitation" (2nd Edition)](https://www.amazon.com/Hacking-Art-Exploitation-Jon-Erickson/dp/1593271441) - Jon Erickson
@@ -46,7 +61,7 @@
   - [struct](https://docs.python.org/3/library/struct.html) - This module converts between Python values and C structs represented as Python bytes objects.
   - [sockets](https://docs.python.org/es/3/library/socket.html) - This module provides access to the BSD socket interface. It is available on all modern Unix systems, Windows, MacOS, and probably additional platforms.
     
-## Training platforms
+## Training
 - [Deusx64](https://deusx64.ai/)
 - [pwnable.tw](https://pwnable.tw/)
 - [pwn.college](https://pwn.college/dojos)
@@ -64,8 +79,9 @@
 - [Libc database search](https://libc.blukat.me/)
 - [Binary_Exploitation_Concepts_Techniques_and_Mitigations](https://www.researchgate.net/publication/373390194_Binary_Exploitation_Concepts_Techniques_and_Mitigations/link/64e8d5cc434d3f628c4cf348/download?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19)
 
-## Attack Techniques 
+## Techniques 
 
+---
 ### [Stack && Buffer Overflow(BOF)](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
 BOF occurs when the amount of data in the buffer exceeds its storage capacity. That extra data overflows into adjacent memory locations and corrupts or overwrites the data in those locations.
 [Example](rsc/BOF/)
@@ -92,6 +108,21 @@ BOF occurs when the amount of data in the buffer exceeds its storage capacity. T
     - No `stack canary` found(Partial)
     - `RELRO`(Partial)
     - Note: Although ASLR randomizes addresses in memory, in binaries without `PIE` (Position Independent Executable), the libc base address can be predictable or filtered through information leaks. See [leaked libc](https://github.com/D4nex/Notes/blob/master/Binary%20Exploitation/leaked_libc.md)
+---
+### [Return-Oriented Programming(ROP)](https://ctf101.org/binary-exploitation/return-oriented-programming/)
+
+---
+### [Heap Overflow](https://cloudmersive.com/article/What-is-a-Heap-Based-Buffer-Overflow-Vulnerability%3F)
+
+---
+
+### [Format String](https://owasp.org/www-community/attacks/Format_string_attack)
+
+---
+
+### [Integer Overflow](https://www.acunetix.com/blog/web-security-zone/what-is-integer-overflow/)
+
+
 
 ## Resources
 
@@ -115,8 +146,11 @@ BOF occurs when the amount of data in the buffer exceeds its storage capacity. T
 ### Protections
 * [NX](rsc/Keywords/Protections/NX.md)
 * [Stack Canary](rsc/Keywords/Protections/CANARY)
+* [Heap Mitigation](rsc/Keywords/Protections/HEAP_MITIGATION.md)
 * [ASLR](rsc/Keywords/Protections/ASLR.md)
-
+* [CFI](rsc/Keywords/Protections/CFI.md)
+* [XnR](sc/Keywords/Protections/XnR.md)
+* [PAIRS](rsc/Keywords/Protections/PAIRS.md)
 ### Linux binaries(ELF)
 * [PLT && GOT](rsc/Keywords/Assambly/plt_got.md)
 ## Pwnology

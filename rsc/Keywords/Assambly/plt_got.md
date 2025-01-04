@@ -1,19 +1,4 @@
-# PLT and GOT
-
-Bypassing ASLR
-
-The PLT and GOT are sections within an ELF file that deal with a large portion of the **dynamic linking**. Dynamically linked binaries are more common than statically linked binary in CTFs. The purpose of **dynamic linking** is that binaries do not have to carry all the code necessary to run within them - this reduces their size substantially. Instead, they rely on system libraries (especially `libc`, the C standard library) to provide the bulk of the fucntionality. For example, each ELF file will not carry their own version of `puts` compiled within it - it will instead dynamically link to the `puts` of the system it is on. As well as smaller binary sizes, this also means the user can continually upgrade their libraries, instead of having to redownload all the binaries every time a new version comes out.
-
-
-So when it's on a new system, it replaces function calls with hardcoded addresses?
-
-Not quite.
-
-The problem with this approach is it requires `libc` to have a constant base address, i.e. be loaded in the same area of memory every time it's run, but remember that [_**ASLR**_](https://en.wikipedia.org/wiki/Address_space_layout_randomization) exists. Hence the need for _dynamic_ linking. Due to the way ASLR works, these addresses need to be resolved _every time the binary is run_. Enter the PLT and GOT.
-
-### The PLT and GOT
-
-The PLT (**Procedure Linkage Table**) and GOT (**Global Offset Table**) work together to perform the linking.
+# The PLT and GOT
 
 When you call `puts()` in C and compile it as an ELF executable, it is not _actually_ `puts()` - instead, it gets compiled as `puts@plt`. Check it out in GDB:
 
