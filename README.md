@@ -56,6 +56,14 @@
 - [crackmes.one](https://crackmes.one/)
 - [Microcorruption](https://microcorruption.com/)
 
+## Miscellaneous
+- [Shellcodes database](http://shell-storm.org/shellcode/index.html)
+- [x64 cheatsheet](https://cs.brown.edu/courses/cs033/docs/guides/x64_cheatsheet.pdf) 
+- [ARM cheatsheet](https://cheatography.com/syshella/cheat-sheets/arm-assembly/)
+- [Libc-database](https://libc.rip/)
+- [Libc database search](https://libc.blukat.me/)
+- [Binary_Exploitation_Concepts_Techniques_and_Mitigations](https://www.researchgate.net/publication/373390194_Binary_Exploitation_Concepts_Techniques_and_Mitigations/link/64e8d5cc434d3f628c4cf348/download?_tp=eyJjb250ZXh0Ijp7ImZpcnN0UGFnZSI6InB1YmxpY2F0aW9uIiwicGFnZSI6InB1YmxpY2F0aW9uIn19)
+
 ## Attack Techniques 
 
 ### [Stack && Buffer Overflow(BOF)](https://owasp.org/www-community/vulnerabilities/Buffer_Overflow)
@@ -87,7 +95,7 @@ BOF occurs when the amount of data in the buffer exceeds its storage capacity. T
 
 ## Resources
 
-### Assambly
+### Assembly
 * Registers
   - [x32 Registers](rsc/Keywords/Assambly/x32registers.md)
   - [x64 Registers](rsc/Keywords/Assambly/x64registers.md)
